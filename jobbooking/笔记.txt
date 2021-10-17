@@ -1,0 +1,28 @@
+java，版本2.5.5，group zf，artifact wr
+developer tools热部署，Spring Boot Actuator监控功能，pring Security安全框架，访问和登录控制，spring web(mvc)，jpa对象表映射，
+
+因为boot集成了tomcat所以不用配置，直接项目main入口右击启动。
+tomcat容器中有main(BootStrap类中)，通过xml配置去加载所以无需找到main入口，deployment的部署做好，就可以运行
+运行：main方法
+	run
+	run with coverage 覆盖率测试
+
+配置文件：1application.yml优先级小于2application.properties
+1 都是K-V格式，通过” : ”引号进行赋值； 同文件夹下会先加载1，然后2覆盖   要有空格 c： 3
+2以”.”进行分割的。：无效。  
+	关于存放位置1.根项目下，根项目config下，resource目录下，resource的config目录下。
+	
+生成报错：
+Failed to configure a DataSource: 'url' attribute is not specified and no embedd
+	数据库等没有配置。
+
+The server time zone value '?й???????' is unrecognized or represents more 
+	Mysql最新版驱动所以报错。新版驱动名字为 driverClass=“com.mysql.cj.jdbc.Driver” URL后，加上 ?serverTimezone=UTC
+
+This application has no explicit mapping for /error, so you are seeing this as a fallback.
+	运行成功，但是没有网页。配置文件下的视图解析器配置问题。
+
+配置报红：
+Cannot resolve class or package 'mysql' less... (Ctrl+F1)  Inspection info: Checks Spring Boot application .yaml configuration files. Hi
+MySQL 这个jar 包依赖类型默认是runtime ，也就是说只有运行时生效，所以虽然这里报错，但是不影响你代码运行。
+或者找到对应的jar包依赖，runtime 修改为Compile即可.MYSQL8可以用com.mysql.cj.jdbc.Driver数据库驱动

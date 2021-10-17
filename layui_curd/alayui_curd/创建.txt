@@ -1,0 +1,22 @@
+创建数据库是
+	create database alayui_curd
+	use alayui_curd
+创建表：
+CREATE TABLE `students` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(10) NOT NULL COMMENT '名字',
+  `Sno` varchar(32) NOT NULL COMMENT '学号',
+  `alias` varchar(32) DEFAULT NULL COMMENT '别名',
+  `course` varchar(32) DEFAULT NULL COMMENT '课程',
+  `mark` int(2) DEFAULT NULL COMMENT '分数',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='学生管理';
+	
+create table courses(
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(10) NOT NULL COMMENT '课程',
+  `code` varchar(32) NOT NULL COMMENT '编号',
+  `teacher` varchar(32) DEFAULT NULL COMMENT '老师',
+  `createTime` dateTime DEFAULT NULL COMMENT '课程',
+  PRIMARY KEY (`id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -1,0 +1,5 @@
+# config
+jdbcUrl = jdbc:mysql://localhost:3306/alayui_curd?characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull
+user = root
+password =cx23456
+devMode = true
