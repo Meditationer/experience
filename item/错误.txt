@@ -1,0 +1,8 @@
+cannot find local variable req/Servlet：严重：为Servlet分配异常
+StandardEngine[Catalina].StandardHost[localhost].StandardContext[].StandardWrappe
+	web.xml配置中没有多个serlvet配置。无法找到相对应的servlet
+	//容器添加servlet(免web.xml的配置)
+	第一次没出错：默认的TOMCAT的WEB.XML 足够你工程使用。默认的就是index.jsp  不是这里的问题
+	debug在获取类实列的时候出错，是dao.properties未配置。然后jdbctemplate复用性不行，改用注解
+
+WebService在services文件中配置多个服务代码

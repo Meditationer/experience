@@ -1,5 +1,7 @@
 package utils;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import org.apache.commons.dbutils.QueryRunner;
+
 import java.sql.SQLException;
 import java.sql.Connection;
 
@@ -9,9 +11,8 @@ import java.sql.Connection;
  */
 public class JdbcUtils {
     private static ComboPooledDataSource dataSource = new ComboPooledDataSource();
-
+    public static QueryRunner qr = new QueryRunner(dataSource);
     private static ThreadLocal<Connection> threadLocal = new ThreadLocal<>();
-
     public static Connection getConnection() throws SQLException {
         Connection transactionConnection = threadLocal.get();
         if (transactionConnection!=null){

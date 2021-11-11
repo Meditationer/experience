@@ -29,3 +29,5 @@
 form表单过来iso-8859-1
 a 标签过来  utf-8
 解决：tomcat的iso-8859-1改为utf-8，form表单提交方式改为get不进行转码
+
+关于添加js/cs文件，复制直接加入

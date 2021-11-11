@@ -1,0 +1,23 @@
+查询脚本：
+select  cmd.ERROR_TYPE， cmd.CREATE_DATE， cmd.PROCESS_DATE， cmd.NO， cmd.ERROR_COUNT，
+           cmd.ERROR_MESSAGE， cmd.STATUS， cmd.SEGMENT1， cmd.WIP_ENTITY_NAME
+  from cux_mes_data_error_v cmd;
+
+对应中文解释
+	ERROR_TYPE	CREATE_DATE	PROCESS_DATE	NO		ERROR_COUNT
+	问题类型		创建时间		导入日期		单号/工序号	错误次数
+	ERROR_MESSAGE	STATUS		SEGMENT1	WIP_ENTITY_NAME
+	错误原因		状态		物料号		工单号
+
+查询条件
+	NO		SEGMENT1	WIP_ENTITY_NAME
+	单号/工序号	物料号		工单号
+
+标题：
+	MES同步错误查询
+
+SELECT * FROM 
+	(SELECT rs.*, ROWNUM as rn FROM (SELECT * FROM cux_items_YD_v WHERE 1=1)  rs
+	 WHERE ROWNUM <= end ) WHERE rn> st;
+
+改动：dao，model，service,web的jsp

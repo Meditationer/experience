@@ -25,30 +25,30 @@
         <div class="col-lg-10">
                 <form class="form-inline wise" action="<c:url value="/getMater"/>" method="get" onsubmit="return x();">
                     <div class="form-group">
-                        &nbsp;<label for="one">物料编号&nbsp;</label>
+                        &ensp;<label for="one">物料编号&ensp;</label>
                         <input type="text" class="form-control" id="one" name="ITEM_NO" value="${ITEM_NO}">
                     </div>
                     <div class="form-group">
-                        &nbsp;<label for="four">物料描述&nbsp;</label>
+                        &ensp;<label for="four">物料描述&ensp;</label>
                         <input type="text" class="form-control" id="four" name="DESCRIPTION" value="${DESCRIPTION}">
                     </div>
                     <div class="form-group">
-                        &nbsp;<label for="five">材&#12288;&#12288;质</label>&nbsp;
+                        &ensp;<label for="five">材&#12288;质</label>&ensp;
                         <input type="text" class="form-control" id="five" name="MATERIAL_TYPE" value="${MATERIAL_TYPE}">
                     </div>
                     <div class="form-group">
-                        &nbsp;<label for="three">规&#12288;&#12288;格</label>&nbsp;
+                        &ensp;<label for="three">规&#12288;格</label>&ensp;
                         <input type="text" class="form-control" id="three" name="SPECIFICATION1" value="${SPECIFICATION1}">
                     </div>
                     <div class="form-group">
-                        &nbsp;<label for="two">图号/标准</label>&nbsp;
+                        &ensp;<label for="two">图号/标准</label>&ensp;
                         <input type="text" class="form-control" id="two" name="GRAPHIC_NO" value="${GRAPHIC_NO}">
                     </div>
                     <div class="form-group">
-                        &nbsp;<label for="two">
+                        &ensp;<label for="two">
                         <span>库存组织</span>
                         <span class="t_color">*</span>
-                        </label>&nbsp;
+                        </label>&ensp;
                         <select class="form-control" id="required" name="organization" value="${organization}">
                             <option value ="0" <c:if test="${'0' eq organization}">selected</c:if>>请选择</option>
                             <option value="水电" <c:if test="${'水电' eq organization}">selected</c:if>>水电</option>

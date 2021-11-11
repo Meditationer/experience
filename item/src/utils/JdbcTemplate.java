@@ -49,8 +49,10 @@ public class JdbcTemplate {
         Connection connection = JdbcUtils.getConnection();
         int count = -1;
         try(PreparedStatement preparedStatement = connection.prepareStatement(sql)){
+            //ResultSet resultSet数据查询结果返回对象
             try(ResultSet resultSet = preparedStatement.executeQuery()){
                 if (resultSet.next()){
+                    //getInt（）方法：检索当前行中指定列的值；若该列的int值为null，则返回0；1是取数据库表中的第一个字段
                     count= resultSet.getInt(1);
                 }
             }

@@ -12,6 +12,7 @@ public class DaoFactory {
     }
     private static Properties properties;
     static {
+        //获取资源文件输入流
         InputStream inputStream = DaoFactory.class.getClassLoader().getResourceAsStream("dao.properties");
         properties = new Properties();
         try {
