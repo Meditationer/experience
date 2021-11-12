@@ -6,3 +6,5 @@ StandardEngine[Catalina].StandardHost[localhost].StandardContext[].StandardWrapp
 	debug在获取类实列的时候出错，是dao.properties未配置。然后jdbctemplate复用性不行，改用注解
 
 WebService在services文件中配置多个服务代码
+	通过持久层获取数据的加载文件没配置
+数据结果集缓存

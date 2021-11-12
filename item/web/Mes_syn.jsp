@@ -18,6 +18,8 @@
     <c:set var="NO" value="${requestScope.NO}"/>
     <c:set var="SEGMENT1" value="${requestScope.SEGMENT1}"/>
     <c:set var="WIP_ENTITY_NAME" value="${requestScope.WIP_ENTITY_NAME}"/>
+        <c:set var="beg" value="${requestScope.beg}"/>
+        <c:set var="end" value="${requestScope.end}"/>
     <div class="row justify-content-center">
         <div class="col-lg-10 table-responsive">
             <form class="form-inline wise" action="<c:url value="/getMeserr"/>" method="get" >
@@ -36,11 +38,11 @@
                 </div>
                 <div class="form-group">
                     &ensp;<label >时间&ensp;</label>
-                    <input type="text" class="form-control minDate"  name="beg" value="${beg}"/>
+                    <input type="text" readonly class="form-control minDate"  name="beg" value="${beg}" autocomplete="off"/>
                 </div>
                 <div class="form-group">
                     &ensp;<label >到&ensp;</label>
-                    <input type="text"  class="form-control maxDate"  name="end" value="${end}"/>
+                    <input type="text" readonly  class="form-control maxDate"  name="end" value="${end}" autocomplete="off"/>
                 </div>
 
                 <button type="submit" class="btn btn-default">查询</button>
@@ -61,6 +63,7 @@
                     <td>错误原因</td>
                     <td>问题类型</td>
                     <td>状态</td>
+                    <td>时间</td>
                 </tr>
                 </thead>
                 <tbody>
@@ -75,6 +78,7 @@
                         <td>${m.ERROR_MESSAGE}</td>
                         <td>${m.ERROR_TYPE}</td>
                         <td>${m.STATUS}</td>
+                        <td>${m.CREATION_DATE}</td>
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -89,11 +93,11 @@
                 <%--分页标签--%>
                 <ul class="pagination">
                     <li class="page-item ${page==1?'disabled':''}">
-                        <a class="page-link" href="<c:url value="/getMeserr?page=${page-1>1?page-1:1}&NO=${NO}&SEGMENT1=${SEGMENT1}&WIP_ENTITY_NAME=${WIP_ENTITY_NAME}"/>">上一页</a>
+                        <a class="page-link" href="<c:url value="/getMeserr?page=${page-1>1?page-1:1}&NO=${NO}&SEGMENT1=${SEGMENT1}&WIP_ENTITY_NAME=${WIP_ENTITY_NAME}&beg=${beg}&end=${end}"/>">上一页</a>
                     </li>
                     <c:if test="${page!=1}">
                         <li class="page-item">
-                            <a class="page-link" href="<c:url value="/getMeserr?page=1&NO=${NO}&SEGMENT1=${SEGMENT1}&WIP_ENTITY_NAME=${WIP_ENTITY_NAME}"/>">1</a>
+                            <a class="page-link" href="<c:url value="/getMeserr?page=1&NO=${NO}&SEGMENT1=${SEGMENT1}&WIP_ENTITY_NAME=${WIP_ENTITY_NAME}&beg=${beg}&end=${end}"/>">1</a>
                         </li>
                     </c:if>
                     <c:if test="${page>2}">
@@ -102,7 +106,7 @@
                         </li>
                     </c:if>
                     <li class="page-item active">
-                        <a class="page-link" href="<c:url value="/getMeserr?page=${page}&NO=${NO}&SEGMENT1=${SEGMENT1}&WIP_ENTITY_NAME=${WIP_ENTITY_NAME}"/>">${page}</a>
+                        <a class="page-link" href="<c:url value="/getMeserr?page=${page}&NO=${NO}&SEGMENT1=${SEGMENT1}&WIP_ENTITY_NAME=${WIP_ENTITY_NAME}&beg=${beg}&end=${end}"/>">${page}</a>
                     </li>
                     <c:if test="${totalPages-page>1}">
                         <li class="page-item disabled">
@@ -111,12 +115,12 @@
                     </c:if>
                     <c:if test="${page!=totalPages}">
                         <li class="page-item">
-                            <a class="page-link" href="<c:url value="/getMeserr?page=${totalPages}&NO=${NO}&SEGMENT1=${SEGMENT1}&WIP_ENTITY_NAME=${WIP_ENTITY_NAME}"/>">${totalPages}</a>
+                            <a class="page-link" href="<c:url value="/getMeserr?page=${totalPages}&NO=${NO}&SEGMENT1=${SEGMENT1}&WIP_ENTITY_NAME=${WIP_ENTITY_NAME}&beg=${beg}&end=${end}"/>">${totalPages}</a>
                         </li>
                     </c:if>
 
                     <li class="page-item ${page==totalPages?'disabled':''}">
-                        <a class="page-link" href="<c:url value="/getMeserr?page=${page+1<totalPages?page+1:totalPages}&NO=${NO}&SEGMENT1=${SEGMENT1}&WIP_ENTITY_NAME=${WIP_ENTITY_NAME}"/>">下一页</a>
+                        <a class="page-link" href="<c:url value="/getMeserr?page=${page+1<totalPages?page+1:totalPages}&NO=${NO}&SEGMENT1=${SEGMENT1}&WIP_ENTITY_NAME=${WIP_ENTITY_NAME}&beg=${beg}&end=${end}"/>">下一页</a>
                     </li>
                 </ul>
             </nav>

@@ -17,8 +17,7 @@ import java.util.List;
  */
 @WebServlet("/getMater")
 public class MaterialServer extends HttpServlet {
-    List rs=null;//10条数据结果
-    double totalPage =1;//总页数
+
     //通过持久层，拿到数据
     private MaterielDao materielDao= (MaterielDao)DaoFactory.getDao("MaterielDao");
     @Override
@@ -29,6 +28,8 @@ public class MaterialServer extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        List rs=null;//10条数据结果
+        double totalPage =1;//总页数
         //设置响应头，告诉浏览器数据类型为json。utf-8
         resp.setContentType("application/json;charset=utf-8");
         resp.setHeader("Access-Control-Allow-Origin", "*");
