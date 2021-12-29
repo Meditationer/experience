@@ -1,0 +1,3 @@
+domain：实体映射关系与数据访问相关的接口和实现
+service：业务逻辑相关的接口与实现	
+web：编写Web层相关的实现，Controller等
