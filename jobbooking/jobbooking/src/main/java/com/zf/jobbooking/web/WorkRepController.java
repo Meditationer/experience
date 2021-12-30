@@ -29,7 +29,7 @@ public class WorkRepController {
     @PostMapping("/")
     public String postUser(@RequestBody WorkRep workRep) {
         // @RequestBody注解用来绑定通过http请求中application/json类型上传的数据
-        workRep.setName()
+        workRep.setName();
         workRepMap.put(workRep.getId(), workRep);
         return "success";
     }

@@ -5,4 +5,5 @@ package com.zf.jobbooking.domain.user;
  * @描述
  */
 public class User {
+
 }
