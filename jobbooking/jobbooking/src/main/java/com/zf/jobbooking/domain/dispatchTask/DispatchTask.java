@@ -11,7 +11,7 @@ public class DispatchTask {
     //id
     private int ID;
     //班组id
-    private String WorkGroupId;
+    private String Work_Group_Id;
     //任务单号  工票号
     private String No;
     //关联工单
@@ -47,6 +47,11 @@ public class DispatchTask {
     //计划开始时间
     private Date  PlanBeginTime;
     //计划完成时间
-    private Date PlanEndTime;
-
+    private Date Plan_End_Time;
+    //任务单状态
+    private int Task_Status;
+    //关联关系
+    private int ASSOCIATED;
+    //关联工单
+    private String ASSOCIATED_WORK_ORDER;
 }

@@ -8,13 +8,39 @@ public class WorkRep {
     //id
     private int ID;
     //班组
-    private String WorkGroupId;
+    private String Work_Group_Id;
     //工票号id
-    private String DispatchTaskId;
+    private String Dispatch_Task_Id;
     //工票号/批次号
-    private String BatchNo;
+    private String Batch_No;
     //工单
-    private String WorkOrderId;
+    private String Work_Order_Id;
+    //工序
+    private String Process_Id;
+    //资源id
+    private String Resource_Id;
+    //目标工序与名称
+    private String Target_Process;
+    //报工人员
+    private double Principal_Id;
+    //实作工时
+    private String Hour;
+    //完工工时
+    private String Finish_Hour;
+    //报工数/完工数量
+    private String Report_Qty;
+    //可检数量
+    private String UnInspect_Qty;
+    //报工时间
+    private String Report_Time;
+    //主报工任务单Id-DispatchTaskid
+    private String Main_Task_Id;
+    //主报工任务单Id
+    private String Report_Mode;
+    //报工方式
+    private String Is_Report;
+    //erp处理结果
+    private String Erp_Result;
 
     public int getID() {
         return ID;
@@ -24,68 +50,68 @@ public class WorkRep {
         this.ID = ID;
     }
 
-    public String getWorkGroupId() {
-        return WorkGroupId;
+    public String getWork_Group_Id() {
+        return Work_Group_Id;
     }
 
-    public void setWorkGroupId(String workGroupId) {
-        WorkGroupId = workGroupId;
+    public void setWork_Group_Id(String work_Group_Id) {
+        Work_Group_Id = work_Group_Id;
     }
 
-    public String getDispatchTaskId() {
-        return DispatchTaskId;
+    public String getDispatch_Task_Id() {
+        return Dispatch_Task_Id;
     }
 
-    public void setDispatchTaskId(String dispatchTaskId) {
-        DispatchTaskId = dispatchTaskId;
+    public void setDispatch_Task_Id(String dispatch_Task_Id) {
+        Dispatch_Task_Id = dispatch_Task_Id;
     }
 
-    public String getBatchNo() {
-        return BatchNo;
+    public String getBatch_No() {
+        return Batch_No;
     }
 
-    public void setBatchNo(String batchNo) {
-        BatchNo = batchNo;
+    public void setBatch_No(String batch_No) {
+        Batch_No = batch_No;
     }
 
-    public String getWorkOrderId() {
-        return WorkOrderId;
+    public String getWork_Order_Id() {
+        return Work_Order_Id;
     }
 
-    public void setWorkOrderId(String workOrderId) {
-        WorkOrderId = workOrderId;
+    public void setWork_Order_Id(String work_Order_Id) {
+        Work_Order_Id = work_Order_Id;
     }
 
-    public String getProcessId() {
-        return ProcessId;
+    public String getProcess_Id() {
+        return Process_Id;
     }
 
-    public void setProcessId(String processId) {
-        ProcessId = processId;
+    public void setProcess_Id(String process_Id) {
+        Process_Id = process_Id;
     }
 
-    public String getResourceId() {
-        return ResourceId;
+    public String getResource_Id() {
+        return Resource_Id;
     }
 
-    public void setResourceId(String resourceId) {
-        ResourceId = resourceId;
+    public void setResource_Id(String resource_Id) {
+        Resource_Id = resource_Id;
     }
 
-    public String getTargetProcess() {
-        return TargetProcess;
+    public String getTarget_Process() {
+        return Target_Process;
     }
 
-    public void setTargetProcess(String targetProcess) {
-        TargetProcess = targetProcess;
+    public void setTarget_Process(String target_Process) {
+        Target_Process = target_Process;
     }
 
-    public double getPrincipalId() {
-        return PrincipalId;
+    public double getPrincipal_Id() {
+        return Principal_Id;
     }
 
-    public void setPrincipalId(double principalId) {
-        PrincipalId = principalId;
+    public void setPrincipal_Id(double principal_Id) {
+        Principal_Id = principal_Id;
     }
 
     public String getHour() {
@@ -96,94 +122,67 @@ public class WorkRep {
         Hour = hour;
     }
 
-    public String getFinishHour() {
-        return FinishHour;
+    public String getFinish_Hour() {
+        return Finish_Hour;
     }
 
-    public void setFinishHour(String finishHour) {
-        FinishHour = finishHour;
+    public void setFinish_Hour(String finish_Hour) {
+        Finish_Hour = finish_Hour;
     }
 
-    public String getReportQty() {
-        return ReportQty;
+    public String getReport_Qty() {
+        return Report_Qty;
     }
 
-    public void setReportQty(String reportQty) {
-        ReportQty = reportQty;
+    public void setReport_Qty(String report_Qty) {
+        Report_Qty = report_Qty;
     }
 
-    public String getUnInspectQty() {
-        return UnInspectQty;
+    public String getUnInspect_Qty() {
+        return UnInspect_Qty;
     }
 
-    public void setUnInspectQty(String unInspectQty) {
-        UnInspectQty = unInspectQty;
+    public void setUnInspect_Qty(String unInspect_Qty) {
+        UnInspect_Qty = unInspect_Qty;
     }
 
-    public String getReportTime() {
-        return ReportTime;
+    public String getReport_Time() {
+        return Report_Time;
     }
 
-    public void setReportTime(String reportTime) {
-        ReportTime = reportTime;
+    public void setReport_Time(String report_Time) {
+        Report_Time = report_Time;
     }
 
-    public String getMainTaskId() {
-        return MainTaskId;
+    public String getMain_Task_Id() {
+        return Main_Task_Id;
     }
 
-    public void setMainTaskId(String mainTaskId) {
-        MainTaskId = mainTaskId;
+    public void setMain_Task_Id(String main_Task_Id) {
+        Main_Task_Id = main_Task_Id;
     }
 
-    public String getReportMode() {
-        return ReportMode;
+    public String getReport_Mode() {
+        return Report_Mode;
     }
 
-    public void setReportMode(String reportMode) {
-        ReportMode = reportMode;
+    public void setReport_Mode(String report_Mode) {
+        Report_Mode = report_Mode;
     }
 
-    public String getIsReport() {
-        return IsReport;
+    public String getIs_Report() {
+        return Is_Report;
     }
 
-    public void setIsReport(String isReport) {
-        IsReport = isReport;
+    public void setIs_Report(String is_Report) {
+        Is_Report = is_Report;
     }
 
-    public String getErpResult() {
-        return ErpResult;
+    public String getErp_Result() {
+        return Erp_Result;
     }
 
-    public void setErpResult(String erpResult) {
-        ErpResult = erpResult;
+    public void setErp_Result(String erp_Result) {
+        Erp_Result = erp_Result;
     }
-
-    //工序
-    private String ProcessId;
-    //资源id
-    private String ResourceId;
-    //目标工序与名称
-    private String TargetProcess;
-    //报工人员
-    private double PrincipalId;
-    //实作工时
-    private String Hour;
-    //完工工时
-    private String FinishHour;
-    //报工数/完工数量
-    private String ReportQty;
-    //可检数量
-    private String UnInspectQty;
-    //报工时间
-    private String ReportTime;
-    //主报工任务单Id-DispatchTaskid
-    private String MainTaskId;
-    //主报工任务单Id
-    private String ReportMode;
-    //报工方式
-    private String IsReport;
-    //erp处理结果
-    private String ErpResult;
 }

@@ -10,8 +10,12 @@ import com.zf.jobbooking.domain.dispatchTask.DispatchTask;
 public class WorkRepServ {
     //扫码完成后的逻辑
     public void OnBarcodeChanged(WorkRep wr){
-        if (!wr.getBatchNo().IsNotEmpty()) return;
+        if (!wr.getBatch_No().IsNotEmpty()) return;
         //根据工票号，查询工票数据
-        DispatchTask dt=
+        DispatchTask dt=null;
+        if (dt==null)
+            return;
+        if(dt.get)
+
     }
 }
