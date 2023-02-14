@@ -1,0 +1,2 @@
+spring:
+	idea直建，选maven。在pom.xml加入相关依赖
